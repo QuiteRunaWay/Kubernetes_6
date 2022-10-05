@@ -19,7 +19,7 @@ spec:
           image: redis:latest
           imagePullPolicy: "IfNotPresent"
           volumeMounts:
-            - name: config-volume
+            - name: config-volume-pv
               mountPath: /etc/config
               readOnly: true
           resources:
@@ -32,7 +32,7 @@ spec:
  
   volumeClaimTemplates:
   - metadata:
-      name: database-redis-hdd
+      name: config-volume-pv
     spec:
       storageClassName: rbd
       accessModes:
@@ -40,3 +40,30 @@ spec:
       resources:
         requests:
           storage: "2Gi"
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: config-volume-pv
+spec:
+  storageClassName: ""
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 2Gi
+  hostPath:
+    path: /etc/config
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc
+spec:
+  storageClassName: ""
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
