@@ -25,6 +25,25 @@
 
 Так же отдельно создаем БД через statefulset:
 
+Первоначальный конфиг не запустился:
+
+![image](https://user-images.githubusercontent.com/92969676/194079267-b328403a-66eb-4deb-92d4-a6b45e762448.png)
+
+![image](https://user-images.githubusercontent.com/92969676/194078881-43cb7ee3-a1f9-4a8f-a596-a16bc72e4126.png)
+
+![image](https://user-images.githubusercontent.com/92969676/194078757-9a783cd6-68f0-4b0d-8af2-06bea5d725e0.png)
+
+Система ожидает от нас volume, как я понимаю. По этому попробуем изменить конфиг (забегая вперед по лекции), чтобы добавить volume или pv.
+
+Я изменил первоначальный конфиг, добавил в него pv и pvc:
+
+![image](https://user-images.githubusercontent.com/92969676/194081703-26d8cf98-168c-4126-be4f-434a1b4c6b14.png)
+
+И всё запустилось:
+
+![image](https://user-images.githubusercontent.com/92969676/194081569-b04f266c-f854-4049-a90b-1c098a96e0f1.png)
+
+![image](https://user-images.githubusercontent.com/92969676/194082322-4d3b8164-34bf-4f2d-ad87-279a663dcbdd.png)
 
 
 
