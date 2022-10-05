@@ -43,10 +43,6 @@
 
 ![image](https://user-images.githubusercontent.com/92969676/194081569-b04f266c-f854-4049-a90b-1c098a96e0f1.png)
 
-![image](https://user-images.githubusercontent.com/92969676/194082322-4d3b8164-34bf-4f2d-ad87-279a663dcbdd.png)
-
-
-
 ## Задание 2: подготовить конфиг для production окружения
 Следующим шагом будет запуск приложения в production окружении. Требования сложнее:
 * каждый компонент (база, бекенд, фронтенд) запускаются в своем поде, регулируются отдельными deployment’ами;
