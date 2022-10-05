@@ -52,6 +52,24 @@
 
 ### Ответ:
 
+Подготавливаем для каждого компонента свой конфиг (front, back, db). Файл в папке Prod в текущем репозитории. 
+Применяем данные файлы в кластере:
+
+![image](https://user-images.githubusercontent.com/92969676/194099478-1bc2a39b-48e0-402a-8904-3846ab2038a8.png)
+
+В итоге у каждого свой сервис:
+
+![image](https://user-images.githubusercontent.com/92969676/194099596-2537bd95-56d6-4140-8e40-fba55d809a40.png)
+
+Каждый компонент в своем поде:
+
+![image](https://user-images.githubusercontent.com/92969676/194101657-d841c78b-ad52-4af7-bfe4-9b078ae3aa62.png)
+
+Каждый регулируется своим Deploy`ем:
+
+![image](https://user-images.githubusercontent.com/92969676/194102046-50cbb83b-c1e3-4494-8e93-6c7efc729c90.png)
+
+
 ## Задание 3 (*): добавить endpoint на внешний ресурс api
 Приложению потребовалось внешнее api, и для его использования лучше добавить endpoint в кластер, направленный на это api. Требования:
 * добавлен endpoint до внешнего api (например, геокодер).
