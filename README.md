@@ -13,7 +13,9 @@
 
 ![image](https://user-images.githubusercontent.com/92969676/194070109-382f4ac3-d613-427a-995d-75d867f68eb6.png)
 
+![image](https://user-images.githubusercontent.com/92969676/194070283-08e94489-828e-4dde-9de2-47d1daf48d74.png)
 
+Далее готовим конфиг для stage окружения 'stage.yaml'[Stage\stage.yaml].
 
 ## Задание 2: подготовить конфиг для production окружения
 Следующим шагом будет запуск приложения в production окружении. Требования сложнее:
