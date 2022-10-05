@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: database 
+  namespace: default
+spec:
+  serviceName: "svc-database"
+  replicas: 1
+  selector:
+    matchLabels:
+      k8s-app: database
+  template:
+    metadata:
+      labels:
+        k8s-app: database
+    spec:
+      containers:
+        - name: database-app
+          image: redis:latest
+          imagePullPolicy: "IfNotPresent"
+          volumeMounts:
+            - name: config-volume
+              mountPath: /etc/config
+              readOnly: true
+          resources:
+            limits:
+              cpu: "2"
+              memory: 2Gi
+            requests:
+              cpu: 200m
+              memory: 1000Mi
+ 
+  volumeClaimTemplates:
+  - metadata:
+      name: database-redis-hdd
+    spec:
+      storageClassName: rbd
+      accessModes:
+        - ReadWriteOnce
+      resources:
+        requests:
+          storage: "2Gi"
