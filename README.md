@@ -15,7 +15,7 @@
 
 ![image](https://user-images.githubusercontent.com/92969676/194070283-08e94489-828e-4dde-9de2-47d1daf48d74.png)
 
-Далее готовим конфиг для stage окружения [stage.yaml](Stage\stage.yaml).
+Далее готовим конфиг для stage окружения [stage.yaml](Stage/stage.yaml).
 
 Создаем Deployment c наименованием нашего приложения multitool, состоящий из 1 пода, который содержит в себе 2 контейнера:
 
